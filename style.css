@@ -1,9 +1,14 @@
 .wrapper {
-  overflow-y: hidden;
   width: 100vw;
   height: 100vh;
+  overflow-y: hidden;
 }
 
-#slideContainer {
+#pageContainer {
   display: flex;
+}
+
+#frontPageContainer {
+  height: 100vh;
+  overflow: scroll;
 }
