@@ -1,0 +1,76 @@
+input[type="datetime-local"] {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bullets {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 6vh;
+  bottom: 0;
+  justify-content: center;
+}
+.bullet {
+  width: 2vmax;
+  height: 2vmax;
+  margin: 0.5vmax;
+  background: #fff;
+  border: 1px solid #aaa;
+}
+.nowBullet {
+  background: #4ce9ed;
+}
+
+
+#wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#pageWrapper {
+  position: absolute;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.pageContainer {
+  display: flex;
+}
+
+.page {
+  text-align: center;
+}
+
+.titleContainer{
+  width: 100%;
+  margin: 12vh 8vw;
+}
+.page.title .subName {
+  margin: 2vh 0 0 0;
+  font-size: 3.5vmax;
+}
+.page.title .date {
+  margin: 5vh 0 0 0;
+  font-size: 2.5vmax;
+}
+
+.numberKeyContainer {
+  margin: 0 8vw;
+}
+.numberKey {
+  width: calc(80vw / 3 - 1vw);
+  height: calc(80vw / 3 - 1vw);
+  margin: 0.5vmax;
+  border: 1px solid #aaa;
+}

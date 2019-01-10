@@ -5,37 +5,72 @@
     <meta name="viewport" content="width=device-width">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>デレイベログ</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div id="bullets"></div>
     <div id="wrapper">
       <div id="pageWrapper">
-        <div class="PageContainer">
-          <div class="page" style="background:red">
-            <p>0-0</p>
+        <div class="pageContainer">
+          <div class="page title center">
+            <div class="titleContainer">
+              <div class="eventName">
+                <h1 class="name">LIVE Groove</h1>
+                <h2 class="subName">Vocal burst</h2>
+              </div>
+              <div class="date">
+                <span>2019/01/11 15:00</span><br>
+                <span>~</span>
+                <span>2019/01/11 15:00</span>
+              </div>
+            </div>
           </div>
-          <div class="page" style="background:blue">
-            <p>0-1</p>
+          <div class="page stamina">
+            <h1>スタミナ回復</h1>
+            <p></p>
+            <div class="numberKeyContainer center">
+              <table>
+                <tr>
+                  <td><div class="numberKey center">7</div></td>
+                  <td><div class="numberKey center">8</div></td>
+                  <td><div class="numberKey center">9</div></td>
+                </tr>
+                <tr>
+                  <td><div class="numberKey center">4</div></td>
+                  <td><div class="numberKey center">5</div></td>
+                  <td><div class="numberKey center">6</div></td>
+                </tr>
+                <tr>
+                  <td><div class="numberKey center">1</div></td>
+                  <td><div class="numberKey center">2</div></td>
+                  <td><div class="numberKey center">3</div></td>
+                </tr>
+                <tr>
+                  <td><div class="numberKey center">c</div></td>
+                  <td><div class="numberKey center">0</div></td>
+                  <td><div class="numberKey center">↵</div></td>
+                </tr>
+              </table>
+
+            </div>
           </div>
-          <div class="page" style="background:green">
+          <div class="page">
             <p>0-2</p>
           </div>
         </div>
-        <div class="PageContainer">
-          <div class="page" style="background:green">
+        <div class="pageContainer">
+          <div class="page">
             <p>1-0</p>
           </div>
-          <div class="page" style="background:red">
+          <div class="page">
             <p>1-1</p>
-          </div>
-          <div class="page" style="background:blue">
-            <p>1-2</p>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="./code.js" charset="utf-8"></script>
+    <script src="js/fitty.min.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
