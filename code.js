@@ -14,15 +14,20 @@ var touchStartX, touchStartY, touchMoveX, touchMoveY;
 window.addEventListener('resize', changeWindowSize(), false);
 
 window.addEventListener('touchstart', e => {
+  // e.preventDefault();
+
   touchStartX = event.touches[0].pageX;
   touchStartY = event.touches[0].pageY;
 }, false);
 window.addEventListener('touchmove', e => {
+  e.preventDefault();
+
   touchMoveX = event.changedTouches[0].pageX;
   touchMoveY = event.changedTouches[0].pageY;
 }, false);
 window.addEventListener('touchend', e => {
-  event.preventDefault();
+  e.preventDefault();
+
   if (horizonSlideFlag && touchStartX > (touchMoveX + 50)) {
     slidePage('<');
   }
@@ -35,6 +40,7 @@ window.addEventListener('touchend', e => {
   else if (verticalSlideFlag && (touchStartY + 50) < touchMoveY) {
     slidePage('v');
   }
+
   checkNextSlideFlag();
 }, false);
 
