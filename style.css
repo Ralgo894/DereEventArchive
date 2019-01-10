@@ -1,14 +1,19 @@
-.wrapper {
+#wrapper {
+  position: relative;
   width: 100vw;
   height: 100vh;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
-#pageContainer {
+#pageWrapper {
+  position: absolute;
+  /* transform: translateX(-320px); */
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all  0.3s ease;
+}
+
+.PageContainer {
   display: flex;
-}
-
-#frontPageContainer {
-  height: 100vh;
-  overflow: scroll;
 }
