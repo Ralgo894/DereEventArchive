@@ -22,6 +22,7 @@ window.addEventListener('touchmove', e => {
   touchMoveY = event.changedTouches[0].pageY;
 }, false);
 window.addEventListener('touchend', e => {
+  event.preventDefault();
   if (horizonSlideFlag && touchStartX > (touchMoveX + 50)) {
     slidePage('<');
   }
