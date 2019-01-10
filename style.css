@@ -1,7 +1,13 @@
-body {
-  overflow: hidden;
+.wrapper {
+  overflow-y: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
-.wrapper {
+#slideContainer {
   display: flex;
+}
+
+#frontPageContainer {
+  overflow-y: scroll;
 }
