@@ -7,7 +7,3 @@
 #slideContainer {
   display: flex;
 }
-
-#frontPageContainer {
-  overflow-y: scroll;
-}
