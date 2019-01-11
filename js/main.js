@@ -6,6 +6,8 @@ var mainXPageCount = 0;
 
 var touchStartX, touchStartY, touchMoveX, touchMoveY;
 
+let lastTouch = 0;
+
 /* ==== */
 fitty('.page.title .name');
 
@@ -19,6 +21,15 @@ window.addEventListener('touchmove', e => {
   e.preventDefault();
 }, {passive: false});
 window.addEventListener('touchend', e => {
+  // ダブルタップズーム回避
+  (() => {
+    const now = window.performance.now();
+    if (now - lastTouch <= 500) {
+      event.preventDefault();
+    }
+    lastTouch = now;
+  })();
+
   touchMoveX = event.changedTouches[0].pageX;
   touchMoveY = event.changedTouches[0].pageY;
 
@@ -34,6 +45,7 @@ window.addEventListener('touchend', e => {
   else if ((touchStartY + 50) < touchMoveY) {
     if (xPageCount == mainXPageCount) slidePage('v');
   }
+
   changeBullet();
 }, false);
 
