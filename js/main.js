@@ -95,11 +95,14 @@ function slidePage(mode) {
     if (yPageCount > (yPageMax - 1)) yPageCount = yPageMax - 1;
   }
 
+  var pageWrapper = document.getElementById('pageWrapper');
   var x = '-' + (window.parent.screen.width * xPageCount);
   var y = '-' + (window.parent.screen.height * yPageCount);
-
-  var pageWrapper = document.getElementById('pageWrapper');
   pageWrapper.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+
+  var background = document.getElementById('background');
+  var bx = '-' + ((background.clientWidth - window.parent.screen.width) / (xPageMax - 1) * xPageCount);
+  background.style.transform = 'translateX(' + bx + 'px)';
 }
 
 function changeBullet() {
