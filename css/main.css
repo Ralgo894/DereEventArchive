@@ -63,7 +63,7 @@ input[type="datetime-local"] {
   justify-content: flex-end;
 }
 .numberKeyContainer {
-  margin: 8vh 0;
+  margin: 5vh 0;
 }
 .numberKey {
   width: calc(90vw / 4 - 1vw);
