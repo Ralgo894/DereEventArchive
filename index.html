@@ -6,6 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>デレイベログ</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -28,28 +29,32 @@
           </div>
           <div class="page stamina">
             <h1>スタミナ回復</h1>
-            <p></p>
+            <div type="text" class="numberDisplay center"><span class="iconBottle">10</span></div>
             <div class="numberKeyContainer center">
               <table>
                 <tr>
-                  <td><div class="numberKey center">7</div></td>
-                  <td><div class="numberKey center">8</div></td>
-                  <td><div class="numberKey center">9</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);">7</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);">8</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);">9</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);"><span class="iconBottle">10</span></div></td>
                 </tr>
                 <tr>
-                  <td><div class="numberKey center">4</div></td>
-                  <td><div class="numberKey center">5</div></td>
-                  <td><div class="numberKey center">6</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);">4</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);">5</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);">6</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);"><span class="iconBottle">20</span></div></td>
                 </tr>
                 <tr>
-                  <td><div class="numberKey center">1</div></td>
-                  <td><div class="numberKey center">2</div></td>
-                  <td><div class="numberKey center">3</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);">1</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);">2</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);">3</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);"><span class="iconBottle">30</span></div></td>
                 </tr>
                 <tr>
-                  <td><div class="numberKey center">c</div></td>
-                  <td><div class="numberKey center">0</div></td>
-                  <td><div class="numberKey center">↵</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);">c</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);">0</div></td>
+                  <td><div class="numberKey center" onclick="">↵</div></td>
+                  <td><div class="numberKey center" onclick="writeNumber(this);"><span class="iconBottle">100</span></div></td>
                 </tr>
               </table>
 

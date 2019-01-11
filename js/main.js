@@ -17,11 +17,11 @@ window.addEventListener('touchstart', e => {
 }, false);
 window.addEventListener('touchmove', e => {
   e.preventDefault();
-
-  touchMoveX = event.changedTouches[0].pageX;
-  touchMoveY = event.changedTouches[0].pageY;
 }, {passive: false});
 window.addEventListener('touchend', e => {
+  touchMoveX = event.changedTouches[0].pageX;
+  touchMoveY = event.changedTouches[0].pageY;
+
   if (touchStartX > (touchMoveX + 50)) {
     slidePage('<');
   }
@@ -105,3 +105,27 @@ function changeBullet() {
   }
 }
 changeBullet();
+
+function writeNumber(me) {
+  var numberDisplay = me.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByClassName('numberDisplay')[0];
+  if (/^[0-9]+?$/.test(me.innerHTML)) {
+    if (/^[0-9]+?$/.test(numberDisplay.innerHTML)) {
+      numberDisplay.innerHTML = numberDisplay.textContent + me.textContent;
+    }
+    else {
+      numberDisplay.innerHTML = me.textContent;
+    }
+  }
+  else {
+    if (me.innerHTML == 'c') {
+      numberDisplay.innerHTML = '0';
+    }
+    else {
+      numberDisplay.innerHTML = me.innerHTML;
+    }
+  }
+
+  if (/^0+[0-9]+/.test(numberDisplay.innerHTML)) {
+    numberDisplay.innerHTML = numberDisplay.innerHTML.match(/^0+(.+)$/)[1];
+  }
+}
