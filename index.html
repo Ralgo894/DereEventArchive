@@ -14,6 +14,17 @@
     <div id="bullets"></div>
     <div id="wrapper">
       <div id="pageWrapper">
+        <div id="top" class="pageContainer">
+          <div class="page title top center">
+            <div class="titleContainer">
+              <div class="eventName centerY">
+                <h2 class="subName">THE iDOLM@STER Cinderella Girls</h2>
+                <h2 class="subName">Starlight Stage</h2>
+                <h1 class="name">Event Archiver</h1>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="pageContainer">
           <div class="page title center">
             <div class="titleContainer">
@@ -22,25 +33,28 @@
                 <h2 class="subName">Vocal burst</h2>
               </div>
               <div class="date">
-                <span>2019/01/11 15:00</span><br>
+                <span>2015/09/25 12:00</span><br>
                 <span>~</span>
-                <span>2019/01/11 15:00</span>
+                <span>2015/10/06 20:59</span>
               </div>
             </div>
           </div>
-          <div class="page stamina">
-            <h1>スタミナ回復</h1>
-            <div type="text" class="numberDisplay center">0</span></div>
+          <div class="page recovery">
+            <h1>Recovery</h1>
+            <div class="display">
+              <p class="numberDisplay numberDisplayLeft center"></p>
+              <p class="numberDisplay center">0</p>
+            </div>
             <div class="numberKeyContainer center">
               <table>
                 <tr>
-                  <td><div class="numberKey numberKeyBottle center" ontouchstart="writeNumber(this);"><span><span class="iconBottle">10</span></div></td>
+                  <td><div class="numberKey numberKeyBottle center" ontouchstart="writeNumber(this);"><span class="iconBottle">10</span></div></td>
                   <td><div class="numberKey center" ontouchstart="writeNumber(this);"><span>10</span></div></td>
                   <td><div class="numberKey center" ontouchstart="writeNumber(this);"><span>20</span></div></td>
                   <td><div class="numberKey center" ontouchstart="writeNumber(this);"><span>30</span></div></td>
                 </tr>
                 <tr>
-                  <td><div class="numberKey numberKeyBottle center" ontouchstart="writeNumber(this);"><span><span class="iconBottle">20</span></div></td>
+                  <td><div class="numberKey numberKeyBottle center" ontouchstart="writeNumber(this);"><span class="iconBottle">20</span></div></td>
                   <td><div class="numberKey center" ontouchstart="writeNumber(this);"><span>40</span></div></td>
                   <td><div class="numberKey center" ontouchstart="writeNumber(this);"><span>50</span></div></td>
                   <td><div class="numberKey center" ontouchstart="writeNumber(this);"><span>60</span></div></td>
@@ -57,95 +71,168 @@
                   <td colspan="2"><div class="numberKey numberKeyDouble center" ontouchstart="">↵</div></td>
                 </tr>
               </table>
-
             </div>
           </div>
-          <div class="page">
-            <p>0-2</p>
+          <div class="page use">
+            <h1>Use</h1>
+            <div class="display">
+              <p class="numberDisplay numberDisplayLeft center"><span class="iconBottle"></span></p>
+              <p class="numberDisplay center">0</p>
+            </div>
+            <div class="numberKeyContainer center">
+              <table>
+                <tr>
+                  <td><div class="numberKey numberKeyBottle center" ontouchstart="changeContainerMode(this);">mode</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">7</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">8</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">9</div></td>
+                </tr>
+                <tr>
+                  <td><div class="numberKey numberKeyBottle center" ontouchstart="stretMemoryTimer(this);" ontouchend="endMemoryTimer(this);"><span class="iconBook"> 1</span></div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">4</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">5</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">6</div></td>
+                </tr>
+                <tr>
+                  <td><div class="numberKey numberKeyBottle center" ontouchstart="stretMemoryTimer(this)"; ontouchend="endMemoryTimer(this);"><span class="iconBook"> 2</span></div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">1</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">2</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">3</div></td>
+                </tr>
+                <tr>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">C</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">0</div></td>
+                  <td colspan="2"><div class="numberKey numberKeyDouble center" ontouchstart="">↵</div></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="page get">
+            <h1>Get</h1>
+            <div class="display">
+              <p class="numberDisplay numberDisplayLeft center"><span class="iconHeart"></span></p>
+              <p class="numberDisplay center">0</p>
+            </div>
+            <div class="numberKeyContainer center">
+              <table>
+                <tr>
+                  <td><div class="numberKey numberKeyBottle center" ontouchstart="changeContainerMode(this);">mode</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">7</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">8</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">9</div></td>
+                </tr>
+                <tr>
+                  <td><div class="numberKey numberKeyBottle center" ontouchstart="stretMemoryTimer(this);" ontouchend="endMemoryTimer(this);"><span class="iconBook"> 1</span></div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">4</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">5</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">6</div></td>
+                </tr>
+                <tr>
+                  <td><div class="numberKey numberKeyBottle center" ontouchstart="stretMemoryTimer(this)"; ontouchend="endMemoryTimer(this);"><span class="iconBook"> 2</span></div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">1</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">2</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">3</div></td>
+                </tr>
+                <tr>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">C</div></td>
+                  <td><div class="numberKey center" ontouchstart="writeNumber(this);">0</div></td>
+                  <td colspan="2"><div class="numberKey numberKeyDouble center" ontouchstart="">↵</div></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="page rankUp">
+            <h1>Rank UP</h1>
+            <div class="rankUpButton center" ontouchstart="addRank(this);">
+              <p>Rank UP</p>
+              <p>Rank <span class="rank">1</span></p>
+            </div>
+          </div>
+          <div class="page option">
+            <h1>Option</h1>
+            <h2>イベント設定</h2>
+            <table class="optionTable">
+              <tbody>
+                <tr>
+                  <td><p>形式</p></td>
+                  <td>
+                    <select class="type" onchange="changeEventOption(this);">
+                      <option value="item">イベントアイテム消費型</option>
+                      <option value="groove">LIVE Groove</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><p>タイトル</p></td>
+                  <td>
+                    <input type="text" value="" onchange="changeEventOption(this);">
+                  </td>
+                </tr>
+                <tr>
+                  <td><p>ブースト</p></td>
+                  <td>
+                    <select class="burst" onchange="changeEventOption(this);">
+                      <option value=""></option>
+                      <option value="vocal">Vocal</option>
+                      <option value="dance">Dance</option>
+                      <option value="visual">Visual</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><p>開始日時</p></td>
+                  <td>
+                    <input type="datetime-local" value="" onchange="changeEventOption(this);">
+                  </td>
+                </tr>
+                <tr>
+                  <td><p>終了日時</p></td>
+                  <td>
+                    <input type="datetime-local" value="" onchange="changeEventOption(this);">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>背景設定</h2>
+            <table class="optionTable">
+              <tbody>
+                <tr>
+                  <td><p>背景画像</p></td>
+                  <td>
+                    <input type="checkbox">
+                  </td>
+                </tr>
+                <tr>
+                  <td><p>アイドル</p></td>
+                  <td>
+                    <select class="idolList"></select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><p>カード</p></td>
+                  <td>
+                    <select class="idolList"></select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><p>特訓</p></td>
+                  <td>
+                    <input type="checkbox">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-        <div class="pageContainer">
-          <div class="page title center">
-            <div class="titleContainer">
-              <div class="eventName">
-                <h1 class="name">LIVE Groove</h1>
-                <h2 class="subName">Vocal burst</h2>
-              </div>
-              <div class="date">
-                <span>2019/01/11 15:00</span><br>
-                <span>~</span>
-                <span>2019/01/11 15:00</span>
-              </div>
-            </div>
-          </div>
-          <div class="page title center">
-            <div class="titleContainer">
-              <div class="eventName">
-                <h1 class="name">LIVE Groove</h1>
-                <h2 class="subName">Vocal burst</h2>
-              </div>
-              <div class="date">
-                <span>2019/01/11 15:00</span><br>
-                <span>~</span>
-                <span>2019/01/11 15:00</span>
-              </div>
-            </div>
-          </div>
-          <div class="page title center">
-            <div class="titleContainer">
-              <div class="eventName">
-                <h1 class="name">LIVE Groove</h1>
-                <h2 class="subName">Vocal burst</h2>
-              </div>
-              <div class="date">
-                <span>2019/01/11 15:00</span><br>
-                <span>~</span>
-                <span>2019/01/11 15:00</span>
-              </div>
-            </div>
-          </div>
-          <div class="page title center">
-            <div class="titleContainer">
-              <div class="eventName">
-                <h1 class="name">LIVE Groove</h1>
-                <h2 class="subName">Vocal burst</h2>
-              </div>
-              <div class="date">
-                <span>2019/01/11 15:00</span><br>
-                <span>~</span>
-                <span>2019/01/11 15:00</span>
-              </div>
-            </div>
-          </div>
-          <div class="page title center">
-            <div class="titleContainer">
-              <div class="eventName">
-                <h1 class="name">LIVE Groove</h1>
-                <h2 class="subName">Vocal burst</h2>
-              </div>
-              <div class="date">
-                <span>2019/01/11 15:00</span><br>
-                <span>~</span>
-                <span>2019/01/11 15:00</span>
-              </div>
-            </div>
-          </div>
-          <div class="page title center">
-            <div class="titleContainer">
-              <div class="eventName">
-                <h1 class="name">LIVE Groove</h1>
-                <h2 class="subName">Vocal burst</h2>
-              </div>
-              <div class="date">
-                <span>2019/01/11 15:00</span><br>
-                <span>~</span>
-                <span>2019/01/11 15:00</span>
-              </div>
+        <div id="addPage"  class="pageContainer">
+          <div class="page centerY">
+            <div class="rankUpButton center" ontouchstart="">
+              <p>Add Event</p>
             </div>
           </div>
         </div>
       </div>
-      <img id="background" src="image/back001.png">
+      <canvas id="background" width="1280" height="824" style="background-image:url(https://hidamarirhodonite.kirara.ca/spread/100615.png)"></canvas>
     </div>
 
     <script src="js/fitty.min.js" charset="utf-8"></script>

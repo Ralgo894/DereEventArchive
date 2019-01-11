@@ -2,13 +2,21 @@ body {
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 
-input[type="datetime-local"] {
+input[type="text"],
+input[type="datetime-local"],
+select {
   background: rgba(0, 0, 0, 0);
   border: none;
 }
 
 .center {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centerY {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -29,7 +37,8 @@ input[type="datetime-local"] {
   border: 1px solid #000;
 }
 .nowBullet {
-  background: rgba(255, 176, 176, 0.6);
+  /* background-image: linear-gradient(-45deg, transparent 49%, black 49%, black 51%, transparent 51%, transparent); */
+  background: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -59,64 +68,142 @@ input[type="datetime-local"] {
   font-size: 5vmax;
   margin: 5vh 0;
   padding: 3vmax;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.4);
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
 
+.display {
+  position: relative;
+}
 .numberDisplay {
-  width: 90vw;
+  width: 86vw;
   height: 7vh;
   margin: 0 calc(3vw - 1px);
-  padding: 0 2vw;
-  background: rgba(255, 255, 255, 0.6);
+  padding: 0 4vw;
+  background: rgba(255, 255, 255, 0.4);
   border: 1px solid #000;
   text-align: right;
   font-size: 4vh;
   justify-content: flex-end;
 }
+.numberDisplayLeft {
+  position: absolute;
+  margin: 1px calc(3vw - 1px);
+  background: none;
+  border: none;
+  text-align: left;
+  justify-content: flex-start;
+}
+
 .numberKeyContainer {
   margin: 5vh 0;
+  font-size: 3vmax;
 }
 .numberKey {
   width: calc(90vw / 4 - 1vw);
   height: calc(90vw / 4 - 1vw);
   margin: 0.5vmax;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.4);
   border: 1px solid #000;
 }
 .numberKeyDouble {
   width: calc(90vw / 2);
 }
 .numberKeyBottle {
-  background: rgba(255, 176, 176, 0.6);
+  background: rgba(255, 176, 176, 0.5);
 }
 
 .titleContainer{
   width: 100%;
   margin: 12vh 8vw;
 }
+/* .page.title.top .eventName {
+  background: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+} */
 .page.title h1 {
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   background: rgba(255, 255, 255, 0);
   border: none;
 }
+.page.title.top h1 {
+  padding-bottom: 0;
+}
 .page.title .subName {
-  margin: 2vh 0 0 0;
+  margin: 0 0 2vh 0;
   font-size: 3.5vmax;
 }
 .page.title .date {
-  margin: 5vh 0 0 0;
+  margin: 5vh 5vw 0;
+  padding: 1vh;
   font-size: 2.5vmax;
+}
+/* .page.title.top .date {
+  margin: 5vh 9vh 0;
+  background: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+} */
+/* .page.title.top .date h2 {
+  font-size: 3.5vmax;
+} */
+
+.page.rankUp {
+  display: flex;
+  flex-direction: column;
+}
+.page.rankUp .rankUpButton {
+  height: auto;
+  margin: 5vmax 5vmax 15vh 5vmax;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid #000;
+  flex-grow: 2;
+  flex-direction: column;
+}
+.page.rankUp .rankUpButton p {
+  margin: 2vmax;
+  font-size: 6vmax;
+}
+.page.rankUp .rank {
+  font-size: 12vmax;
+}
+
+.page.option h2,
+.page.option p {
+  font-size: 2.6vmax;
+}
+.page.option h2{
+  margin: 0 0 1vh 0;
+}
+.page.option .optionTable {
+  width: 100vw;
+  margin: 0 0 5vh 0;
+  background: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.page.option .optionTable tr td:first-child {
+  width: 25vw;
+}
+.page.option .optionTable td {
+  padding: 1vmax;
+}
+.page.option .optionTable td input,
+.page.option .optionTable td select {
+  width: 100%;
 }
 
 
 #background {
   position: absolute;
   height: 100vh;
+  background: linear-gradient(-135deg, #ff7ff4, #5b97ff);
+  background-repeat: no-repeat;
+  background-size: contain;
   filter: blur(5px);
-  /* opacity: 0.1; */
   z-index: -1;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
@@ -127,9 +214,32 @@ input[type="datetime-local"] {
 
 /* Font Awesome */
 
-.iconBottle:before {
-
+.iconBottle::before {
   font-family: "Font Awesome 5 Free";
   content: '\f72f';
+  font-weight: 900;
+}
+
+.iconGem::before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f3a5';
+  font-weight: 900;
+}
+
+.iconHeart::before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f004';
+  font-weight: 900;
+}
+
+.iconBook::before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f02d';
+  font-weight: 900;
+}
+
+.iconAward::before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f559';
   font-weight: 900;
 }
