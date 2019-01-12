@@ -156,11 +156,10 @@ select {
   flex-direction: column;
 }
 .page.rankUp .rankUpButton {
-  height: auto;
-  margin: 5vmax 5vmax 15vh 5vmax;
+  height: 56vh;
+  margin: 5vmax;
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid #000;
-  flex-grow: 2;
   flex-direction: column;
 }
 .page.rankUp .rankUpButton p {
@@ -200,7 +199,6 @@ select {
 #background {
   position: absolute;
   height: 100vh;
-  background: linear-gradient(-135deg, #ff7ff4, #5b97ff);
   background-repeat: no-repeat;
   background-size: contain;
   filter: blur(5px);
